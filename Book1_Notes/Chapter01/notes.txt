@@ -1,0 +1,113 @@
+JavaScript is a high-level, just-in-time compiled programming language
+
+» JavaScript is not Java.
+» JavaScript is not a scripting language, it is a programming language 
+(with it's own unique syntax)
+
+Machine language is a low-level language because it is understood 
+by a computer with little to no (low) abstraction.
+Think: low-level, closer to the final step of computer processing.
+
+Machine languages are the fastest languages to run on a computer 
+(because they don't have to jump through any hoops before starting to
+run) however they have their drawbacks.
+- Humans can neither understand nor write them efficiently
+- Machine languages are not portable between different machines
+(in other words they are processor-specific)
+
+This brings us to high-level languages
+- They are abstractions that allow us, humans, to write things
+that humans can understand
+- However, a computer needs to compile this this type of code in
+order to understand what it does and more importantly, run it
+
+Compilation
+- Compilation is the process of converting code from a high-level 
+language that programmers can understand (like JavaScript, Python, 
+C++, and others) into a low-level language that the computer can run.
+
+Traditional Compiled Languages:
+
+    High Level                                 Low-Level
+written by programmer:   (compilation)       computer runs:
+    Source Code               =>              Machine Code
+
+Just-in-time (JIT) Compiler used by JS:
+The program that runs JavaScript (known as a JavaScript ~engine~) 
+compiles the code before running it.
+
+Java (totally separate programming language)
+Javascript >> was LiveScript >> which was Mocha (Netscape's Endeavour)
+JScript (Microsoft's Response to Netscape)
+jQuery (Came much later, likely to aid in standardizing web programming)
+
+As of 1997, JS has adhered to the ECMAScript specification such that it
+is standard across browsers
+
+It wasn't until 2008's release of Google Chrome that the various
+languages' (JavaScript and JScript) differences were settled.
+The result was ECMA Script 5 & 6 (aka ES2015) which allowed for
+JavaScript development to finally take off.
+
+Because JS uses JIT compilation, the browser downloads the actual source code
+when you visit a webpage. This means that as a user, we have access
+to the HTML, CSS, and JS of a webpage.
+
+The Internet
+The internet is a network of millions of computers that can talk to 
+one another.
+The protocols or rules by which they can talk to one another is called
+TCP/IP or Transmission Control Protocol / Internet Protocol
+
+A computer connected to the internet will be running an HTTP server
+that uses HTTP/HTTPS (the latter being more common today) protocol to respond 
+to a web page's request for data and other files required by web pages.
+
+Domain Name Service (DNS) translates internet protocol (IP) addresses
+to domain name, or more human readable names. e.g.:
+127.0.0.1 becomes www.example.com
+
+FE vs. BE
+A computer that makes HTTP requests is called a client.
+A computer that responds to requests from clients is called a server.
+
+Before JS, there were thin (or dumb) clients that simply had to receive
+data from a server and display it.
+
+Example GET Request from a web browser at www.example.com/about.html
+###########################################################################
+GET /about.html HTTP/1.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0
+    Safari/537.36
+    Host: www.example.com // domain
+Accept-Language: en-us
+Accept-Encoding: gzip, deflate
+Connection: Keep-Alive // note below
+###########################################################################
+
+The Keep-Alive instruction allows the connection between your
+browser and the server to stay active for multiple requests.
+
+JavaScript allows web browser clients to become so much more.
+Now, not only are they able to request data like the HTML file in the
+example above, they can download scripts and data from the server that
+allow for data processing, reorganization, and so much more.
+Thin => Thick clients thanks to JS
+
+Server-side services:
+Def: Programs that handle logins, credit card processing, data retrieval,
+and much more on web servers.
+It is better that these sensitive operations be done on the server-side and 
+not the client-side because the server can be implemented behind firewalls and
+protective measures. Users will not have access to this code, as it
+is not part of the web browser's source code.
+
+Node.js can be used to run JavaScript on the server just like it can
+be used on the client or web browser side.
+Both instances of JavaScript are run the same way with JIT compilation.
+
+The difference between front-end JavaScript and back-end JavaScript
+running in Node.js is that web browsers never see the JavaScript 
+that runs on the server — they only receive the results of those 
+programs running.

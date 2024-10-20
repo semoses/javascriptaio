@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+</head>
+
+<body>
+    <h2>Shopping List:</h2>
+    <ul id="ingredients"></ul>
+    <script>
+        const ingredients = [
+            'eggs',
+            'milk',
+            'cheese',
+            'garlic',
+            'onion',
+            'kale',
+            'salt',
+            'pepper',
+        ];
+        let listItems = ingredients
+            .map((singleIngredient) => `<li>${singleIngredient}</li>`) // at the end of this step, we have an array of list items
+            .join(''); // this step joins them together
+        // the functions above are chained together
+        document.getElementById("ingredients").innerHTML = listItems;
+    </script>
+</body>
+
+</html>

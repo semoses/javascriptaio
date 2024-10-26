@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Movie Picker</title>
+    <script type="text/javascript" src="data/movies.js"></script>
+</head>
+
+<body>
+    <button onclick="displayMovieChoices()">Choose a Movie</button>
+    <h1>You should watch <span id="movie-choice"></span></h1>
+    <script>
+        const chooseMovie = (choices) => {
+            return choices[Math.floor(Math.random() * choices.length)];
+        };
+        const displayMovieChoices = () => {
+            console.log(movies);
+            const movieChoice = chooseMovie(movies);
+            console.log(movieChoice);
+            document.getElementById('movie-choice').innerHTML = movieChoice;
+        }
+    </script>
+</body>
+
+</html>
